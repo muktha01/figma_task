@@ -1,8 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const Benefits = () => {
+const Benefits = forwardRef((props, ref) => {
   return (
-    <div className="bg-gradient-to-b from-red-200 h-[100vh] px-16 py-20">
+
+    <div  ref={ref} className="bg-gradient-to-b from-red-200 h-[100vh] px-16 py-20">
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
         <div className="md:col-span-1 relative pt-44">
@@ -66,7 +67,8 @@ const Benefits = () => {
           </div>
         </div>
 
-        <div className="md:col-span-2 pt-10 ">
+        <div    
+ className="md:col-span-2 pt-10 ">
           <h2 className="text-4xl font-bold text-left mb-8">
             Benefit of Become Partner
           </h2>
@@ -120,6 +122,7 @@ const Benefits = () => {
       </div>
     </div>
   );
-};
+
+});
 
 export default Benefits;

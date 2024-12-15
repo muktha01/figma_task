@@ -4,7 +4,7 @@ const Banner = () => {
 
 
   return (
-  <div className="banner bg-gradient-to-b from-red-50 bg-gradient-to-r from-red-250  flex justify-between  h-[100vh] gap-8 px-8">
+  <div className="banner bg-gradient-to-b from-red-50 bg-gradient-to-r from-red-100  flex justify-between  h-[100vh] gap-8 px-8">
   
     <div className="text-center pl-14 flex-1 : ">
       <h1 className="text-6xl text-left pt-32 font-bold mb-4">Join Malta’s </h1>

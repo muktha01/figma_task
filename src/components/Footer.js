@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const Footer = () => {
+const Footer = forwardRef((props, ref)=> {
   return (
     <footer className="bg-red-500 text-white py-8 text-center">
      
      <div className="grid md:grid-cols-2 gap-1 mb-8 p-10">
   
-  <div className="flex flex-col justify-center pl-10">
+  <div ref={ref} className="flex flex-col justify-center pl-10">
     <h2 className="text-3xl text-left font-bold mb-2">
       SO WHY LATE? ONE STEP FAR <br /> FROM A TOUR
     </h2>
@@ -159,6 +159,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;

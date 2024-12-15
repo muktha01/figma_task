@@ -9,21 +9,42 @@ import Banner from './components/Section1';
 import PartnershipCards from './components/Section3';
 import GetStatedBanner from './components/Section6';
 import Questions from './components/Section5';
+import { useRef } from 'react';
 
 function App() {
+
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
+
+  
+  const handleScroll = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Adjusts alignment to the top of the viewport
+        inline: "nearest", // For horizontal scrolling if needed
+      });
+    }
+  };
+  
+
   return (
     <div className="App">
-        <Header/>
+        <Header 
+          onScroll={handleScroll}
+          refs={{ homeRef, aboutRef, servicesRef }}
+        />
         <div className='pl-20 pr-20'>
           <hr/>
         </div>
         <Banner/>
         <PartnerProcess/>
         <PartnershipCards/>
-        <Benefits/> 
+        <Benefits ref={homeRef}/> 
         <Questions/>
         <GetStatedBanner/>
-        <Footer/>
+        <Footer ref={aboutRef}/>
 
     </div>
   );
